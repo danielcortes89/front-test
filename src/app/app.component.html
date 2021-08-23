@@ -1,3 +1,19 @@
-<div *ngFor="let job of jobs">
-  <div>{job.message}</div>
+<form #addForm="ngForm" (ngSubmit)="onAddJob(addForm">
+  <div>
+    <label>Message</label>
+    <input type="text" name="message" ngModel placeholder="Message"/>
+  </div>
+  <button id="add-job-button">Submit</button>
+</form>
+
+<div>
+  <h2>For Finding</h2>
+
+  <form #searchForm="ngForm" (ngSubmit)="onSearchJob(searchForm)">
+    <div>
+      <label>Id:</label>
+      <input type="number" placeholder="Id to get"/>
+    </div>
+    <button>Submit</button>
+  </form>
 </div>
