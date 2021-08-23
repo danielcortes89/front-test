@@ -26,4 +26,5 @@ export class JobService {
     public getJobById(jobId: number): Observable<Job> {
         return this.http.get<Job>(`${this.apiServerUrl}/find/${jobId}`)
     }
+    
 }
